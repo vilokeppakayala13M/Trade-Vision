@@ -1,0 +1,283 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.tab {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px 8px 0 0;
+}
+
+.tab:hover {
+    background: rgba(0, 0, 0, 0.02);
+    color: var(--text-primary);
+}
+
+.tab.active {
+    color: var(--text-primary);
+    font-weight: 600;
+    border-bottom-color: var(--primary);
+    background: rgba(30, 58, 138, 0.05);
+}
+
+.tableContainer {
+    background: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background: #f8f9fa;
+    border-bottom: 1px solid var(--border);
+}
+
+.table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table td {
+    padding: 1rem;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.companyCell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.companyLogo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.category {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 0.15rem;
+}
+
+.companyName {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.positive {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.negative {
+    color: var(--accent-red);
+    font-weight: 600;
+}
+
+.applyBtn,
+.preApplyBtn,
+.statusBtn,
+.docBtn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.applyBtn {
+    background: #00d09c;
+    color: white;
+}
+
+.applyBtn:hover {
+    background: #00b889;
+    transform: translateY(-1px);
+}
+
+.preApplyBtn {
+    background: transparent;
+    color: #00d09c;
+    border: 1px solid #00d09c;
+}
+
+.preApplyBtn:hover {
+    background: rgba(0, 208, 156, 0.1);
+}
+
+.statusBtn {
+    background: transparent;
+    color: #00d09c;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.statusBtn:hover {
+    color: #00b889;
+}
+
+.docBtn {
+    background: transparent;
+    color: #00d09c;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.docBtn:hover {
+    color: #00b889;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--surface);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.emptyIcon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.emptyText {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.exploreBtn {
+    padding: 0.75rem 2rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.exploreBtn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .tableContainer {
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 600px;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .companyLogo {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+}

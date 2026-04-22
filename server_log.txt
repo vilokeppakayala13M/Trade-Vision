@@ -1,0 +1,42 @@
+
+> stock-insights@0.1.0 start
+> next start
+
+   Γû▓ Next.js 16.0.3
+   - Local:         http://localhost:3000
+   - Network:       http://192.168.31.130:3000
+
+ Γ£ô Starting...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\vilok\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\package-lock.json
+
+ Γ£ô Ready in 572ms
+Error fetching batch quotes: Error: Call `const yahooFinance = new YahooFinance()` first.  Upgrading from v2?  See https://github.com/gadicc/yahoo-finance2/blob/dev/docs/UPGRADING.md.
+    at ed.quote (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:330739)
+    at e7 (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:331122)
+Error fetching batch quotes: Error: Call `const yahooFinance = new YahooFinance()` first.  Upgrading from v2?  See https://github.com/gadicc/yahoo-finance2/blob/dev/docs/UPGRADING.md.
+    at ed.quote (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:330739)
+    at e7 (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:331122)
+Error fetching batch quotes: Error: Call `const yahooFinance = new YahooFinance()` first.  Upgrading from v2?  See https://github.com/gadicc/yahoo-finance2/blob/dev/docs/UPGRADING.md.
+    at ed.quote (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:330739)
+    at e7 (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:331122)
+Error fetching batch quotes: Error: Call `const yahooFinance = new YahooFinance()` first.  Upgrading from v2?  See https://github.com/gadicc/yahoo-finance2/blob/dev/docs/UPGRADING.md.
+    at ed.quote (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:330739)
+    at e7 (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:331122)
+Error fetching batch quotes: Error: Call `const yahooFinance = new YahooFinance()` first.  Upgrading from v2?  See https://github.com/gadicc/yahoo-finance2/blob/dev/docs/UPGRADING.md.
+    at ed.quote (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:330739)
+    at e7 (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:331122)
+Error fetching batch quotes: Error: Call `const yahooFinance = new YahooFinance()` first.  Upgrading from v2?  See https://github.com/gadicc/yahoo-finance2/blob/dev/docs/UPGRADING.md.
+    at ed.quote (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:330739)
+    at e7 (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:331122)
+Error fetching batch quotes: Error: Call `const yahooFinance = new YahooFinance()` first.  Upgrading from v2?  See https://github.com/gadicc/yahoo-finance2/blob/dev/docs/UPGRADING.md.
+    at ed.quote (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:330739)
+    at e7 (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:331122)
+Error fetching batch quotes: Error: Call `const yahooFinance = new YahooFinance()` first.  Upgrading from v2?  See https://github.com/gadicc/yahoo-finance2/blob/dev/docs/UPGRADING.md.
+    at ed.quote (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:330739)
+    at e7 (C:\Users\vilok\OneDrive\Desktop\modified\stock-insights\.next\server\chunks\[root-of-the-server]__0b839726._.js:26:331122)

@@ -1,0 +1,131 @@
+.container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.container:hover {
+    box-shadow: 0 4px 16px var(--shadow);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.periodButtons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.periodBtn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.periodBtn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: rgba(30, 58, 138, 0.05);
+}
+
+.periodBtn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.suggestionsList {
+    position: absolute;
+    bottom: 120%;
+    left: 0;
+    right: 0;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.suggestionItem {
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.suggestionItem:last-child {
+    border-bottom: none;
+}
+
+.suggestionItem:hover,
+.activeSuggestion {
+    background: rgba(59, 130, 246, 0.15);
+}
+
+.suggestionMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.suggestionSymbol {
+    color: #3b82f6;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.suggestionName {
+    color: #e2e8f0;
+    font-size: 0.85rem;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.suggestionMeta {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 0.7rem;
+    color: #94a3b8;
+}
+
+/* Custom scrollbar for suggestions */
+.suggestionsList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.suggestionsList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.suggestionsList::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+}
+
+.suggestionsList::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
