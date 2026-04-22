@@ -81,31 +81,7 @@ Create a `.env.local` file in the root:
 API_KEY=your_api_key_here
 ```
 
----
 
-## 📸 Screenshots
-### Market Overview
-
-![Overview market](public/screenshots/overview-market.png)
-
-### Stock Details
-
-![Stock Detail](public/screenshots/stock-details.png)
-
-### Watchlist
-
-![Watchlist](public/screenshots/watchlist.png)
-
-### News 
-
-![News](public/screenshots/news.png)
-
-### Tools 
-
-![Tools](public/screenshots/tools.png)
-
-
----
 
 ## 📈 Future Improvements
 
