@@ -86,27 +86,26 @@ API_KEY=your_api_key_here
 ## 📸 Screenshots
 ### Market Overview
 
-![Overview market]("C:\Users\vilok\Downloads\Overview market.png")
+![Overview market](public/screenshots/overview-market.png)
 
 ### Stock Details
 
-![Stock Detail]("C:\Users\vilok\Downloads\Stock details.png")
+![Stock Detail](public/screenshots/stock-details.png)
 
 ### Watchlist
 
-![Watchlist]("C:\Users\vilok\Downloads\Watchlist.png")
+![Watchlist](public/screenshots/watchlist.png)
 
 ### News 
 
-![News]("C:\Users\vilok\Downloads\News.png")
+![News](public/screenshots/news.png)
 
 ### Tools 
 
-![Tools]("C:\Users\vilok\Downloads\Tools.png")
+![Tools](public/screenshots/tools.png)
 
 
 ---
-
 
 ## 📈 Future Improvements
 
