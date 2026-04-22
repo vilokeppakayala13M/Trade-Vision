@@ -83,6 +83,31 @@ API_KEY=your_api_key_here
 
 ---
 
+## 📸 Screenshots
+### Market Overview
+
+![Overview market]("C:\Users\vilok\Downloads\Overview market.png")
+
+### Stock Details
+
+![Stock Detail]("C:\Users\vilok\Downloads\Stock details.png")
+
+### Watchlist
+
+![Watchlist]("C:\Users\vilok\Downloads\Watchlist.png")
+
+### News 
+
+![News]("C:\Users\vilok\Downloads\News.png")
+
+### Tools 
+
+![Tools]("C:\Users\vilok\Downloads\Tools.png")
+
+
+---
+
+
 ## 📈 Future Improvements
 
 * 📊 Add charts & visualization
