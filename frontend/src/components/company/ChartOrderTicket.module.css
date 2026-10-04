@@ -1,0 +1,240 @@
+.container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.accountHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.accountInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.walletIcon {
+  color: var(--primary);
+}
+
+.label {
+  color: var(--text-secondary);
+}
+
+.balanceValue {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.equityTag {
+  margin-left: 0.75rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.holdingBadge {
+  font-size: 0.8rem;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.ticketForm {
+  display: grid;
+  grid-template-columns: 140px 110px 140px 140px 140px 1fr;
+  gap: 0.85rem;
+  align-items: end;
+}
+
+@media (max-width: 1024px) {
+  .ticketForm {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.sideToggle {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px;
+  border-radius: 8px;
+  height: 42px;
+}
+
+.sideBtn {
+  flex: 1;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.activeBuy {
+  background: #10b981 !important;
+  color: white !important;
+}
+
+.activeSell {
+  background: #ef4444 !important;
+  color: white !important;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inputLabel {
+  font-size: 0.725rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.selectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.selectInput {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  outline: none;
+  appearance: none;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 8px;
+  pointer-events: none;
+  color: var(--text-secondary);
+}
+
+.qtyGroup {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 38px;
+}
+
+.qtyBtn {
+  width: 32px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qtyBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.qtyInput {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.priceDisplay,
+.valueDisplay {
+  padding: 0.55rem 0.75rem;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.submitButton {
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submitBuy {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.submitSell {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.successBanner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

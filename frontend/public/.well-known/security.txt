@@ -1,0 +1,5 @@
+Contact: mailto:support@tradevision.in
+Expires: 2027-06-05T19:42:43+05:30
+Preferred-Languages: en
+Canonical: https://tradevision.in/.well-known/security.txt
+Policy: https://tradevision.in/security

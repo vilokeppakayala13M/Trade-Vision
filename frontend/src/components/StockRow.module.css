@@ -1,0 +1,99 @@
+.row {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3) var(--space-4);
+    display: grid;
+    grid-template-columns: 2fr 3fr 1.5fr auto;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.symbol {
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.name {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chart {
+    height: 40px;
+}
+
+.priceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.price {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.positive {
+    display: flex;
+    align-items: center;
+    color: var(--green-text);
+    font-size: var(--text-xs);
+    font-weight: 600;
+}
+
+.negative {
+    display: flex;
+    align-items: center;
+    color: var(--red-text);
+    font-size: var(--text-xs);
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watchlistBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    transition: background var(--transition-fast);
+}
+
+.watchlistBtn:hover {
+    background: var(--surface-hover);
+}
+
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr 1fr auto;
+    }
+    
+    .chart {
+        display: none;
+    }
+}

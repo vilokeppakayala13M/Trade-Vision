@@ -1,0 +1,148 @@
+.bannerContainer {
+    position: fixed;
+    bottom: var(--space-4);
+    left: var(--space-4);
+    right: var(--space-4);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-lg), var(--shadow-glow-blue);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-4);
+    align-items: center;
+    z-index: 9999;
+    animation: slideUp var(--duration-slow) var(--ease-out) forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.closeButton {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    background: transparent;
+    border: none;
+    color: var(--text-3);
+    cursor: pointer;
+    padding: var(--space-1);
+    border-radius: var(--radius-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.closeButton:hover {
+    background: var(--bg-overlay);
+    color: var(--text-1);
+}
+
+.iconArea {
+    flex-shrink: 0;
+}
+
+.appIcon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+    color: white;
+    font-size: var(--text-md);
+    font-weight: var(--weight-bold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.contentArea {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-right: var(--space-4);
+}
+
+.title {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    color: var(--text-1);
+    margin: 0;
+}
+
+.description {
+    font-size: 12px;
+    color: var(--text-2);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.actionsArea {
+    display: flex;
+    align-items: center;
+}
+
+.installButton {
+    background: var(--blue-500);
+    color: white;
+    border: none;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+    min-height: 36px;
+}
+
+.installButton:hover {
+    background: var(--blue-600);
+    transform: translateY(-1px);
+}
+
+.installButton:active {
+    background: var(--blue-700);
+    transform: translateY(0);
+}
+
+.iosInstruction {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: var(--bg-overlay);
+    border: 1px solid var(--border-default);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    color: var(--text-1);
+    font-weight: var(--weight-medium);
+}
+
+.shareIcon {
+    color: var(--blue-400);
+}
+
+/* On desktop viewports, center the banner and make it compact */
+@media (min-width: 768px) {
+    .bannerContainer {
+        max-width: 460px;
+        left: var(--space-6);
+        right: auto;
+        bottom: var(--space-6);
+    }
+}

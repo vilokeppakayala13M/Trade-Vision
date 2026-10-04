@@ -1,0 +1,160 @@
+.cardWrapper {
+    width: 100%;
+}
+
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    transition: border-color var(--transition-base);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    border-color: var(--blue-500);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.info h3 {
+    font-size: var(--text-md);
+    font-weight: var(--weight-bold);
+    color: var(--text-1);
+    margin-bottom: var(--space-1);
+}
+
+.symbol {
+    font-size: var(--text-md);
+    font-weight: var(--weight-bold);
+    color: var(--text-1);
+    margin-bottom: var(--space-1);
+}
+
+.info p {
+    font-size: var(--text-sm);
+    color: var(--text-2);
+}
+
+.name {
+    font-size: var(--text-sm);
+    color: var(--text-2);
+}
+
+.priceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.price h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--text-1);
+    margin-bottom: var(--space-1);
+}
+
+.priceText {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--text-1);
+    margin-bottom: var(--space-1);
+}
+
+.price span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+}
+
+.priceContainer span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+}
+
+.positive {
+    color: var(--green-text);
+}
+
+.negative {
+    color: var(--red-text);
+}
+
+.tickUp {
+    animation: tickUp 0.6s var(--ease-out) forwards;
+}
+
+.tickDown {
+    animation: tickDown 0.6s var(--ease-out) forwards;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--border-subtle);
+}
+
+.typeBadge {
+    font-size: var(--text-xs);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    background: var(--blue-glow);
+    color: var(--blue-400);
+    font-weight: var(--weight-medium);
+}
+
+.watchlistBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    color: var(--text-3);
+    transition: color var(--transition-fast), background var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watchlistBtn:hover {
+    background: var(--red-glow);
+    color: var(--red);
+}
+
+.watchlistBtn.active {
+    color: var(--red);
+}
+
+.chart {
+    height: 60px;
+    margin-top: var(--space-1);
+}

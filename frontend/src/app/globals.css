@@ -1,0 +1,318 @@
+/* Section 1 — CSS reset and base */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--bg-base);
+  color: var(--text-1);
+}
+
+/* Section 2 — Complete color token system in :root */
+:root {
+  /* Background tokens */
+  --bg-base: #0b0e14; /* deepest background — page background */
+  --bg-surface: #111827; /* card and panel background — replaces old --surface */
+  --bg-elevated: #1a2236; /* elevated panels, dropdowns, tooltips */
+  --bg-overlay: #1e2a3d; /* hover states on elevated surfaces */
+  --bg-input: #0f1520; /* form input backgrounds */
+
+  /* Border tokens */
+  --border-subtle: rgba(255, 255, 255, 0.04); /* very faint dividers */
+  --border-default: rgba(255, 255, 255, 0.08); /* standard borders — replaces old --border */
+  --border-strong: rgba(255, 255, 255, 0.14); /* emphasis borders */
+  --border-focus: rgba(59, 130, 246, 0.5); /* focus rings — REPLACES ALL rgba(30,58,138) occurrences */
+
+  /* Brand blue tokens */
+  --blue-400: #60a5fa; /* lighter brand blue */
+  --blue-500: #3b82f6; /* primary brand — replaces old --primary */
+  --blue-600: #2563eb; /* button hover */
+  --blue-700: #1d4ed8; /* button active */
+  --blue-glow: rgba(59, 130, 246, 0.15); /* glow effects — replaces all rgba(30,58,138,0.1) focus boxes */
+
+  /* Semantic green tokens */
+  --green: #10b981; /* positive price change, market open — replaces --accent-green */
+  --green-dark: #059669; /* green hover states */
+  --green-glow: rgba(16, 185, 129, 0.12); /* green backgrounds — replaces rgba(34,197,94,0.2) in navbar */
+  --green-border: rgba(16, 185, 129, 0.2); /* green borders */
+  --green-text: #34d399; /* lighter green for text on dark backgrounds */
+
+  /* Semantic red tokens */
+  --red: #ef4444; /* negative price change, market closed — replaces --accent-red */
+  --red-dark: #dc2626; /* red hover states */
+  --red-glow: rgba(239, 68, 68, 0.12); /* red backgrounds */
+  --red-border: rgba(239, 68, 68, 0.2); /* red borders */
+  --red-text: #f87171; /* lighter red for text */
+
+  /* Semantic amber tokens */
+  --amber: #f59e0b; /* warnings, alerts — replaces --accent-orange */
+  --amber-glow: rgba(245, 158, 11, 0.12); /* amber backgrounds */
+  --amber-border: rgba(245, 158, 11, 0.2); /* amber borders */
+
+  /* Text tokens */
+  --text-1: #f8fafc; /* primary text — replaces --text-primary */
+  --text-2: #94a3b8; /* secondary text — replaces --text-secondary */
+  --text-3: #64748b; /* tertiary text, placeholders */
+  --text-4: #475569; /* muted text — replaces --text-muted */
+
+  /* Glass morphism tokens */
+  --glass-bg: rgba(17, 24, 39, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-blur: blur(16px);
+
+  /* Shadow tokens */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-glow-blue: 0 0 0 1px rgba(59, 130, 246, 0.3), 0 4px 16px rgba(59, 130, 246, 0.15);
+
+  /* Backward-compatibility aliases */
+  --background: var(--bg-base);
+  --surface: var(--bg-surface);
+  --surface-hover: var(--bg-overlay);
+  --primary: var(--blue-500);
+  --primary-glow: var(--blue-glow);
+  --accent-green: var(--green);
+  --accent-green-glow: var(--green-glow);
+  --accent-red: var(--red);
+  --accent-red-glow: var(--red-glow);
+  --accent-orange: var(--amber);
+  --text-primary: var(--text-1);
+  --text-secondary: var(--text-2);
+  --text-muted: var(--text-4);
+  --border: var(--border-default);
+}
+
+/* Section 3 — Type scale tokens */
+:root {
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-md: 17px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 30px;
+  --text-3xl: 38px;
+
+  /* Font weight tokens */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Line height tokens */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-loose: 1.75;
+
+  /* Spacing tokens */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Border radius tokens */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Animation duration tokens */
+  --duration-fast: 100ms;
+  --duration-base: 200ms;
+  --duration-slow: 350ms;
+  --duration-slower: 500ms;
+
+  /* Animation easing tokens */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Transition shorthand tokens */
+  --transition-fast: var(--duration-fast) var(--ease-out);
+  --transition-base: var(--duration-base) var(--ease-out);
+  --transition-slow: var(--duration-slow) var(--ease-in-out);
+}
+
+/* Section 4 — Global element styles */
+a {
+  color: var(--blue-500);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--blue-400);
+  text-decoration: underline;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-1);
+  letter-spacing: -0.02em;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+}
+
+/* New utility classes */
+.surface {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+}
+
+.elevated {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+}
+
+.text-positive {
+  color: var(--green-text);
+}
+
+.text-negative {
+  color: var(--red-text);
+}
+
+.text-muted {
+  color: var(--text-3);
+}
+
+/* Section 5 — Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-overlay);
+  border-radius: var(--radius-xs);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-500);
+}
+
+/* Section 6 — Add a @keyframes shimmer for skeleton loaders */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-surface) 25%, var(--bg-elevated) 50%, var(--bg-surface) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+/* Section 7 — Add tick flash keyframes for live price updates */
+@keyframes tickUp {
+  0% {
+    color: var(--green);
+  }
+  100% {
+    color: var(--text-1);
+  }
+}
+
+@keyframes tickDown {
+  0% {
+    color: var(--red);
+  }
+  100% {
+    color: var(--text-1);
+  }
+}
+
+.tick-up {
+  animation: tickUp 0.6s var(--ease-out) forwards;
+}
+
+.tick-down {
+  animation: tickDown 0.6s var(--ease-out) forwards;
+}
+
+/* Mobile Touch Targets and Adjustments */
+@media (max-width: 768px) {
+  button:not(.exception), 
+  a.navItem, 
+  .filterButton, 
+  .tab-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+/* Accessibility Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-4);
+  background: var(--blue-500);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  z-index: 10000;
+  transition: top var(--transition-fast);
+  font-weight: var(--weight-bold);
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: white;
+  text-decoration: none;
+}

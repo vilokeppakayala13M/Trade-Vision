@@ -1,35 +1,29 @@
 {
-  "name": "stock-insights",
-  "version": "0.1.0",
+  "name": "tradevision-monorepo",
+  "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-    "dev": "next dev -p 3005",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "framer-motion": "^12.23.24",
-    "lucide-react": "^0.554.0",
-    "mongoose": "^9.1.6",
-    "next": "16.0.3",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "react-intersection-observer": "^10.0.3",
-    "react-virtualized-auto-sizer": "^2.0.2",
-    "react-window": "^2.2.6",
-    "recharts": "^3.4.1",
-    "xlsx": "^0.18.5",
-    "yahoo-finance2": "^3.10.2"
+    "install:all": "npm install && npm install --prefix frontend && npm install --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run start:dev --prefix backend",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "build:frontend": "npm run build --prefix frontend",
+    "build:backend": "npm run build --prefix backend",
+    "build": "npm run build:frontend && npm run build:backend",
+    "start:frontend": "npm run start --prefix frontend",
+    "start:backend": "npm run start:prod --prefix backend",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@types/react-window": "^1.8.8",
-    "baseline-browser-mapping": "^2.10.12",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.3",
-    "typescript": "^5"
+    "@types/node": "^25.9.0",
+    "concurrently": "^8.2.2",
+    "husky": "^9.1.7",
+    "next": "^16.2.6",
+    "typescript": "^6.0.3"
   }
 }

@@ -1,0 +1,156 @@
+.header {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.companyInfo h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-1);
+    margin-bottom: 0.5rem;
+}
+
+.symbol {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--blue-glow);
+    color: var(--blue-400);
+    border-radius: var(--radius-xs);
+    font-size: 0.9rem;
+    font-weight: var(--weight-semibold);
+}
+
+.priceInfo {
+    text-align: right;
+}
+
+.price {
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-1);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.change {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: var(--weight-semibold);
+    justify-content: flex-end;
+}
+
+.positive {
+    color: var(--green-text);
+}
+
+.negative {
+    color: var(--red-text);
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-default);
+    margin-bottom: 2rem;
+}
+
+.tab {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: none;
+    color: var(--text-2);
+    font-size: 1rem;
+    font-weight: var(--weight-medium);
+    cursor: pointer;
+    position: relative;
+    transition: color var(--transition-fast);
+}
+
+.tab:hover {
+    color: var(--blue-400);
+}
+
+.activeTab {
+    color: var(--blue-500);
+}
+
+.activeTab::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--blue-500);
+}
+
+.content {
+    animation: fadeIn 0.3s var(--ease-out);
+}
+
+.section {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    margin-bottom: var(--space-6);
+}
+
+.heading {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-1);
+    margin-bottom: var(--space-4);
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.stat:last-child {
+    border-bottom: none;
+}
+
+.stat span {
+    color: var(--text-2);
+    font-size: var(--text-sm);
+}
+
+.stat strong {
+    color: var(--text-1);
+    font-size: var(--text-md);
+    font-weight: var(--weight-semibold);
+}
+
+.text {
+    color: var(--text-2);
+    line-height: var(--leading-loose);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

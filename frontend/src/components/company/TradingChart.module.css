@@ -1,0 +1,279 @@
+.container {
+    background: var(--surface, #111111);
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.periodButtons {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.periodBtn {
+    padding: 0.4rem 0.875rem;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    font-family: inherit;
+}
+
+.periodBtn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.05);
+    color: #f1f5f9;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.periodBtn.active {
+    background: rgba(245, 158, 11, 0.12);
+    border-color: rgba(245, 158, 11, 0.3);
+    color: #fbbf24;
+}
+
+.periodBtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.toolsRow {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.875rem;
+    padding-top: 0.875rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.toolBtn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.4rem 0.875rem;
+    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.toolBtn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.06);
+    color: #f1f5f9;
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.toolBtn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.toolBtnActive {
+    background: rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.4);
+    color: #60a5fa;
+}
+
+.toolBtnActive:hover:not(:disabled) {
+    background: rgba(59, 130, 246, 0.18);
+}
+
+.toolBtnCompare {
+    background: rgba(236, 72, 153, 0.1);
+    border-color: rgba(236, 72, 153, 0.35);
+    color: #f472b6;
+}
+
+.toolBtnCompare:hover:not(:disabled) {
+    background: rgba(236, 72, 153, 0.18);
+}
+
+.compareDropdown {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    right: 0;
+    background: #1a2236;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 1.25rem;
+    z-index: 50;
+    min-width: 230px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.compareInput {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #f1f5f9;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    font-family: inherit;
+}
+
+.compareInput:focus {
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.08);
+}
+
+.compareSubmit {
+    flex: 1;
+    padding: 0.45rem;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 8px;
+    color: #fbbf24;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-family: inherit;
+}
+
+.compareSubmit:hover:not(:disabled) {
+    background: rgba(245, 158, 11, 0.25);
+}
+
+.compareSubmit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.compareCancel {
+    padding: 0.45rem 0.875rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #64748b;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+    font-family: inherit;
+}
+
+.compareCancel:hover {
+    color: #f87171;
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.suggestionsList {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.suggestionItem {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background 0.15s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.suggestionItem:last-child {
+    border-bottom: none;
+}
+
+.suggestionItem:hover,
+.activeSuggestion {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.suggestionMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.suggestionSymbol {
+    color: #60a5fa;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.suggestionName {
+    color: #e2e8f0;
+    font-size: 0.8rem;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+
+.suggestionMeta {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.7rem;
+    color: #64748b;
+}
+
+.suggestionsList::-webkit-scrollbar {
+    width: 5px;
+}
+
+.suggestionsList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.suggestionsList::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+}
+
+.suggestionsList::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.09) 50%, rgba(255, 255, 255, 0.04) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+    border-radius: 4px;
+}

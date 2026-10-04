@@ -1,0 +1,294 @@
+.container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8);
+    background: var(--bg-base);
+}
+
+.card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-xl);
+    padding: 3rem;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(59, 130, 246, 0.08);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-1);
+}
+
+.header p {
+    color: var(--text-2);
+    font-size: var(--text-base);
+}
+
+.googleBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.5rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-default);
+    color: var(--text-1);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    cursor: pointer;
+    transition: background var(--transition-base), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.googleBtn:hover {
+    background: var(--bg-overlay);
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    color: var(--text-2);
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-default);
+}
+
+.divider span {
+    padding: 0 1rem;
+    font-size: var(--text-sm);
+}
+
+.methodToggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    background: var(--bg-elevated);
+    padding: 0.25rem;
+    border-radius: var(--radius-sm);
+}
+
+.methodBtn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--text-2);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.methodBtn:hover {
+    color: var(--blue-400);
+}
+
+.activeMethod {
+    background: var(--bg-surface);
+    color: var(--blue-500);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.inputGroup {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-2);
+    pointer-events: none;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    background: var(--bg-input);
+    border: 1px solid var(--border-default);
+    color: var(--text-1);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-base);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.inputGroup input:focus {
+    border-color: var(--blue-500);
+    box-shadow: 0 0 0 3px var(--blue-glow);
+    outline: none;
+}
+
+.inputGroup input::placeholder {
+    color: var(--text-3);
+}
+
+.eyeBtn {
+    position: absolute;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-2);
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    transition: color var(--transition-fast);
+}
+
+.eyeBtn:hover {
+    color: var(--blue-500);
+}
+
+.otpBtn,
+.verifyBtn {
+    position: absolute;
+    right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--blue-500);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    transition: background var(--transition-base), transform var(--transition-fast), box-shadow var(--transition-base);
+    white-space: nowrap;
+}
+
+.otpBtn:hover:not(:disabled),
+.verifyBtn:hover:not(:disabled) {
+    background: var(--blue-600);
+    box-shadow: 0 2px 8px var(--blue-glow);
+}
+
+.otpBtn:disabled,
+.verifyBtn:disabled {
+    background: var(--border-default);
+    color: var(--text-2);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.verifiedBadge {
+    position: absolute;
+    right: 0.75rem;
+    color: var(--green-text);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.inputGroup input:disabled {
+    background: var(--bg-overlay);
+    cursor: not-allowed;
+}
+
+.error {
+    color: var(--red);
+    font-size: var(--text-sm);
+    margin-top: -0.75rem;
+}
+
+.forgotPassword {
+    text-align: right;
+    margin-top: -0.5rem;
+}
+
+.forgotPassword a {
+    color: var(--blue-400);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    transition: color var(--transition-fast);
+}
+
+.forgotPassword a:hover {
+    color: var(--blue-500);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    background: var(--blue-500);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    transition: background var(--transition-base), transform var(--transition-fast), box-shadow var(--transition-base);
+    margin-top: 0.5rem;
+}
+
+.submitBtn:hover {
+    background: var(--blue-600);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-glow-blue);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-default);
+}
+
+.footer p {
+    color: var(--text-2);
+    font-size: var(--text-sm);
+}
+
+.toggleBtn {
+    background: transparent;
+    border: none;
+    color: var(--blue-400);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.toggleBtn:hover {
+    color: var(--blue-500);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 2rem;
+    }
+
+    .header h1 {
+        font-size: var(--text-xl);
+    }
+}

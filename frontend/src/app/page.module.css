@@ -1,0 +1,69 @@
+.section {
+    margin-bottom: var(--space-8);
+}
+
+.grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: 1fr;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.filterContainer {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filterButton {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-default);
+    background: transparent;
+    color: var(--text-2);
+    font-weight: var(--weight-medium);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.filterButton:hover {
+    background: var(--bg-elevated);
+    color: var(--text-1);
+    border-color: var(--border-strong);
+}
+
+.activeFilter {
+    background: var(--blue-glow);
+    color: var(--blue-400);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.activeFilter:hover {
+    background: rgba(59, 130, 246, 0.2);
+}
+
+@media (min-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1400px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
