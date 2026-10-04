@@ -39,12 +39,10 @@ const SECRET_PATTERNS = [
 
 // Specific known compromised values we want to ensure never get recommitted
 const KNOWN_COMPROMISED_VALUES = [
-  'd4i5cs1r01qkv40h095gd4i5cs1r01qkv40h0960', // Finnhub key
-  'AIzaSyBhCcwXoP1Q0qKvGcBXUpI-zOKHDgyJfUM', // Gemini key
-  'dev_secret_key_123',                      // Weak JWT secret
-  'dev_refresh_key_123',                     // Weak JWT refresh secret
-  'd4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5', // Backend JWT secret
-  'a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2'  // Backend JWT refresh secret
+  process.env.FINNHUB_API_KEY,
+  process.env.GEMINI_API_KEY,
+  process.env.JWT_SECRET,
+  process.env.JWT_REFRESH_SECRET,
 ];
 
 // Files matching these patterns are completely blocked
